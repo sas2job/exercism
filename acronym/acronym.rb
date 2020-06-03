@@ -1,8 +1,5 @@
 module Acronym
  def self.abbreviate(value)
-  result = ""
-    input = value.split(/\W+/)
-    input.map {|word| result += word[0].upcase}
-    result
+    value.scan( /\b[a-zA-Z]/).join("").upcase
   end
 end
